@@ -96,4 +96,6 @@ RUN set -ex; \
 
 RUN pip install pipenv poetry
 
+RUN pip install termtosvg
+
 CMD ["python3"]
