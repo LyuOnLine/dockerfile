@@ -2,3 +2,4 @@
 - **gcc7 + grpc 1.29.x**: gcc7 and grpc 1.29.x.
 - **python with pipenv&poetry**:  python with pipenv and poetry.
 - **anaconda with pipenv**: anaconda(ipython) with gui.
+- **Hisilicon 3559 build enviroment**: Hisilicon 3559 v200 build enviroment.
