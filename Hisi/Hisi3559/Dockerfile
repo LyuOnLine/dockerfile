@@ -30,7 +30,10 @@ RUN apt-get -qq update \
         unzip \
         bc \
         bison \
-        flex
+        flex \
+        dos2unix \
+        python \
+        libtool
 
 RUN mkdir -p /var/local/gperf && cd /var/local/gperf \
     && wget http://ftp.gnu.org/pub/gnu/gperf/gperf-3.1.tar.gz \
