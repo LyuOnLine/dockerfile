@@ -57,6 +57,14 @@ RUN cd /var/local/toolchain && tar xzf ./arm-himix100-linux.tgz \
     && ./arm-himix100-linux.install \
     && rm -rf /var/local/toolchain
 
+# cmake, need for thirdpart source-code
+RUN mkdir /tmp/cmake && cd /tmp/cmake && wget "https://cmake.org/files/v3.12/cmake-3.12.2-Linux-x86_64.tar.gz" \
+        && tar xzf ./cmake-3.12.2-Linux-x86_64.tar.gz \
+        && cp -rf ./cmake-3.12.2-Linux-x86_64/bin /usr/local/ \
+        && cp -rf ./cmake-3.12.2-Linux-x86_64/doc /usr/local/ \
+        && cp -rf ./cmake-3.12.2-Linux-x86_64/share /usr/local/ \
+        && rm -rf /tmp/cmake
+
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV PATH=/opt/hisi-linux/x86-arm/arm-himix100-linux/bin:$PATH
